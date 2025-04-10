@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-st.title("MABANI CAPITAL - Simulation de Projet de Lotissement")
-
+st.title("MABANI CAPITAL")
+st.subheader("Simulation de Projet de Lotissement")
 surface_totale = st.number_input("Surface totale du terrain (m²)", value=10000, step=100)
 pourcentage_vendable = st.slider("Pourcentage de surface vendable (%)", 0, 100, 60)
 prix_achat_terrain = st.number_input("Prix d'achat du terrain (€)", value=350000, step=1000)
