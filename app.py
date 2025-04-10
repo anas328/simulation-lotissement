@@ -4,14 +4,14 @@ import pandas as pd
 st.title("Simulation de Projet de Lotissement")
 
 surface_totale = st.number_input("Surface totale du terrain (m²)", value=10000, step=100)
-pourcentage_vendable = st.slider("Pourcentage de surface vendable (%)", 0, 100, 65)
+pourcentage_vendable = st.slider("Pourcentage de surface vendable (%)", 0, 100, 60)
 prix_achat_terrain = st.number_input("Prix d'achat du terrain (€)", value=350000, step=1000)
 superficie_par_lot = st.number_input("Superficie moyenne par lot (m²)", value=100, step=10)
-prix_vente_par_lot = st.number_input("Prix de vente par lot (€)", value=40000, step=1000)
-cout_viabilisation_par_m2 = st.number_input("Coût de viabilisation par m² (€)", value=50, step=1)
+prix_vente_par_lot = st.number_input("Prix de vente par lot (€)", value=50000, step=1000)
+cout_viabilisation_par_m2 = st.number_input("Coût des travaux par m² (€)", value=40, step=1)
 frais_etudes = st.number_input("Frais d'études et autorisations (€)", value=50000, step=1000)
 frais_acquisition = st.number_input("Frais d'acquisition (€)", value=27850, step=1000)
-frais_commercialisation_pourcentage = st.slider("Frais de commercialisation (%)", 0, 10, 3)
+frais_commercialisation_pourcentage = st.slider("Frais de commercialisation (%)", 0, 10, 5)
 
 surface_vendable = surface_totale * (pourcentage_vendable / 100)
 nombre_lots = surface_vendable // superficie_par_lot
